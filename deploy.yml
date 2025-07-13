@@ -1,0 +1,7 @@
+- hosts: local
+  tasks:
+    - name: Build Docker image
+      shell: docker build -t my-devops-app .
+
+    - name: Run Docker container
+      shell: docker run -d -p 3000:3000 my-devops-app
